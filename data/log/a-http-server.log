@@ -115,3 +115,5 @@ info - 02/May/2015:22:08:13 +0000 - shutdown
 127.0.0.1 - - [02/May/2015:22:08:30 +0000] "GET /auth/login/123 HTTP/1.1" 200 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
 127.0.0.1 - - [02/May/2015:22:08:32 +0000] "GET /auth/login/123 HTTP/1.1" 200 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
 info - 02/May/2015:22:08:33 +0000 - shutdown
+127.0.0.1 - - [02/May/2015:22:23:57 +0000] "GET /auth/login/123 HTTP/1.1" 200 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+info - 02/May/2015:22:24:02 +0000 - shutdown
