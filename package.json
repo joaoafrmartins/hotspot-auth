@@ -1,0 +1,44 @@
+{
+  "name": "hotspot-auth",
+  "version": "0.0.0",
+  "main": "lib",
+  "description": "Hotspot Auth",
+  "keywords": [
+    "hotspot",
+    "auth"
+  ],
+  "scripts": {
+    "start": "a-http-server"
+  },
+  "dependencies": {
+    "a-http-server": "",
+    "a-http-server-component-social-auth": ""
+  },
+  "devDependencies": {},
+  "config": {
+    "port": 3000,
+    "components": {
+      "a-http-server-component-social-auth": {
+        "facebook": {
+          "disabled": true,
+          "appId": ""
+        }
+      }
+    },
+    "plugins": {
+      "a-http-server-plugin-session": {
+        "redis": {
+          "socket": "./data/redis/redis-server.sock"
+        }
+      }
+    }
+  },
+  "homepage": "https://github.com/joaoafrmartins/hotspot-auth",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaoafrmartins/hotspot-auth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joaoafrmartins/hotspot-auth/issues"
+  }
+}
