@@ -1,6 +1,6 @@
 npm-debug.log
 node_modules
-data/log/hotspot-auth.log
+data/log/a-http-server.log
 data/redis/dump.rdb
 data/redis/redis-server.pid
 data/redis/redis-server.log
