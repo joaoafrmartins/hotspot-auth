@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "a-http-server": "",
-    "a-http-server-component-social-auth": ""
+    "a-http-server-plugin-api": "",
+    "a-http-server-component-api-user": "",
+    "a-http-server-component-auth": ""
   },
   "devDependencies": {},
   "config": {
@@ -23,7 +25,7 @@
       }
     },
     "components": {
-      "a-http-server-component-social-auth": {
+      "a-http-server-component-auth": {
         "facebook": {
           "enabled": true,
           "appId": "",
@@ -40,6 +42,15 @@
       "a-http-server-plugin-session": {
         "redis": {
           "socket": "./data/redis/redis-server.sock"
+        }
+      },
+      "a-http-server-plugin-api": {
+        "endpoint": "/api/v1",
+        "database": {
+          "adapter": "redis",
+          "options": {
+            "socket": "./data/redis/redis-server.sock"
+          }
         }
       }
     }
