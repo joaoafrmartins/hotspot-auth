@@ -1,7 +1,6 @@
 {
   "name": "hotspot-auth",
   "version": "0.0.0",
-  "main": "lib",
   "description": "Hotspot Auth",
   "keywords": [
     "hotspot",
@@ -18,10 +17,21 @@
   "devDependencies": {},
   "config": {
     "port": 3000,
+    "middleware": {
+      "cookies": {
+        "secret": "secret"
+      }
+    },
     "components": {
       "a-http-server-component-social-auth": {
         "facebook": {
-          "disabled": true,
+          "enabled": true,
+          "appId": "",
+          "appSecret": "",
+          "callbackUrl": ""
+        },
+        "twitter": {
+          "enabled": false,
           "appId": ""
         }
       }
