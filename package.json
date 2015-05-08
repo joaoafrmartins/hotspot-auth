@@ -13,8 +13,7 @@
   "dependencies": {
     "a-http-server": "",
     "a-http-server-plugin-api": "",
-    "a-http-server-component-api-user": "",
-    "a-http-server-component-auth": ""
+    "a-http-server-resource-accounts": ""
   },
   "devDependencies": {},
   "config": {
@@ -22,20 +21,6 @@
     "middleware": {
       "cookies": {
         "secret": "secret"
-      }
-    },
-    "components": {
-      "a-http-server-component-auth": {
-        "facebook": {
-          "enabled": true,
-          "appId": "",
-          "appSecret": "",
-          "callbackUrl": ""
-        },
-        "twitter": {
-          "enabled": false,
-          "appId": ""
-        }
       }
     },
     "plugins": {
@@ -46,12 +31,45 @@
       },
       "a-http-server-plugin-api": {
         "endpoint": "/api/v1",
+        "authorization": {
+          "secret": "secret",
+          "requestProperty": "auth"
+        },
         "database": {
-          "adapter": "redis",
-          "options": {
-            "socket": "./data/redis/redis-server.sock"
+          "default": {
+            "driver": "redis",
+            "options": {
+              "socket": "./data/redis/redis-server.sock"
+            }
           }
-        }
+        },
+        "resource": {
+          "scopes": [
+            "user"
+          ],
+          "methods": [
+            "get",
+            "put",
+            "post",
+            "delete"
+          ],
+          "routes": [
+            {
+              "path": "/"
+            },
+            {
+              "path": "/:id"
+            }
+          ]
+        },
+        "resources": [
+          "a-http-server-resource-accounts"
+        ]
+      }
+    },
+    "components": {
+      "a-http-server-component-json-forms": {
+        "hello": "configs!"
       }
     }
   },
@@ -62,5 +80,7 @@
   },
   "bugs": {
     "url": "https://github.com/joaoafrmartins/hotspot-auth/issues"
-  }
+  },
+  "author": "João Afonso Martins",
+  "license": "MIT"
 }
