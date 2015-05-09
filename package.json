@@ -32,8 +32,7 @@
       "a-http-server-plugin-api": {
         "endpoint": "/api/v1",
         "authorization": {
-          "secret": "secret",
-          "requestProperty": "auth"
+          "secret": "secret"
         },
         "database": {
           "default": {
@@ -46,20 +45,6 @@
         "resource": {
           "scopes": [
             "user"
-          ],
-          "methods": [
-            "get",
-            "put",
-            "post",
-            "delete"
-          ],
-          "routes": [
-            {
-              "path": "/"
-            },
-            {
-              "path": "/:id"
-            }
           ]
         },
         "resources": [
