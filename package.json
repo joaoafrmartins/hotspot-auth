@@ -13,7 +13,9 @@
   "dependencies": {
     "a-http-server": "",
     "a-http-server-plugin-api": "",
-    "a-http-server-resource-accounts": ""
+    "a-http-server-resource-accounts": "",
+    "a-http-server-resource-resources": "",
+    "a-http-server-component-resources": ""
   },
   "devDependencies": {},
   "config": {
@@ -29,16 +31,18 @@
           "socket": "./data/redis/redis-server.sock"
         }
       },
+      "a-http-server-plugin-auth": {
+        "endpoint": "/auth",
+        "secret": "secret"
+      },
       "a-http-server-plugin-api": {
         "endpoint": "/api/v1",
-        "authorization": {
-          "secret": "secret"
-        },
         "database": {
-          "default": {
-            "driver": "redis",
+          "api": {
+            "driver": "mongoose",
             "options": {
-              "socket": "./data/redis/redis-server.sock"
+              "host": "localhost",
+              "port": "27017"
             }
           }
         },
@@ -53,7 +57,7 @@
       }
     },
     "components": {
-      "a-http-server-component-json-forms": {
+      "a-http-server-component-resources": {
         "hello": "configs!"
       }
     }

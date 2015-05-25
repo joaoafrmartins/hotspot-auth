@@ -5,3 +5,6 @@ data/redis/dump.rdb
 data/redis/redis-server.pid
 data/redis/redis-server.log
 data/redis/redis-server.sock
+data/mongod/mongod.pid
+data/mongod/mongod.log
+data/mongod/mongod.sock
